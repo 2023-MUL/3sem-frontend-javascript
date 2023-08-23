@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+img {
+  width: 300px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 300px;
+}
+
+button {
+  width: 75px;
+  height: 20px;
+}
+
+p {
+  margin: 0;
+}
