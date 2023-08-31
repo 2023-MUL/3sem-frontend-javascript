@@ -11,7 +11,7 @@
       <h1>Pretty Flowers</h1>
       <p>total: <span id="total">0</span> kr</p>
     </nav>
-    <main>
+    <main id="main-content">
       <img
         src="https://images.unsplash.com/photo-1572454591674-2739f30d8c40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
       />
@@ -21,6 +21,16 @@
         <button id="add-button">+</button>
       </div>
     </main>
-    <script src="script.js"></script>
+    <template id="template">
+      <div>
+        <img id="img" src="" />
+        <div class="buttons">
+          <button id="minus-button">-</button>
+          <p id="amount">0</p>
+          <button id="add-button">+</button>
+        </div>
+      </div>
+    </template>
+    <script src="script.js" defer></script>
   </body>
 </html>
