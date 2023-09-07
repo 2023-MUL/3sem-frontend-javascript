@@ -1,5 +1,13 @@
 import { createFlower } from "./create-flower.js";
+import { fetchFlowers } from "./flowers-api.js";
 
+const form = document.getElementById("create-flower");
+form.addEventListener("submit", (event) => {
+  console.log("Hello from Form");
+  event.preventDefault();
+});
+
+/*
 const flower1 = {
   id: 1,
   name: "Small flowers",
@@ -25,7 +33,14 @@ const flower3 = {
 };
 
 const allFlowers = [flower1, flower2, flower3];
+*/
 
-allFlowers.forEach((x) => {
-  createFlower(x);
-});
+async function load() {
+  const body = await fetchFlowers();
+
+  body.forEach((x) => {
+    createFlower(x);
+  });
+}
+
+load();
