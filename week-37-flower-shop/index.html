@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js" defer type="module"></script>
+    <script src="form-test.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <h1>Pretty Flowers</h1>
+      <p>total: <span id="total">0</span> kr</p>
+    </nav>
+    <main id="main-content"></main>
+    <div>
+      <form id="create-flower">
+        <label for="new-name">Name for new Flower</label>
+        <input type="text" id="new-name" name="name" />
+        <input type="file" id="flower-image" name="image" />
+      </form>
+    </div>
+    <template id="template">
+      <div>
+        <img id="img" src="" />
+        <div class="buttons">
+          <button id="minus-button">-</button>
+          <p id="amount">0</p>
+          <button id="add-button">+</button>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>
