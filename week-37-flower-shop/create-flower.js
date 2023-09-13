@@ -62,9 +62,3 @@ function fillP(clone, x) {
   const cloneP = clone.getElementById("amount");
   cloneP.id = "amount-" + x.id;
 }
-
-function testBase64(x) {
-  var image = new Image();
-  image.src = x.img_base64;
-  document.body.appendChild(image);
-}
