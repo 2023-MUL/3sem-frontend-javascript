@@ -25,10 +25,19 @@ function getTemplateClone() {
 }
 
 function fillImage(clone, x) {
-  // Udfylder img på kopien
-  const img = clone.getElementById("img");
-  img.src = x.imgUrl;
-  img.id = "image-" + x.id;
+  console.log(x);
+
+  if (x.imgUrl) {
+    // Hente billede fra imgUrl
+    // Udfylder img på kopien
+    const img = clone.getElementById("img");
+    img.src = x.imgUrl;
+    img.id = "image-" + x.id;
+  } else if (x.img_base64) {
+    // Hente billede fra base64
+    const img = clone.getElementById("img");
+    img.src = x.img_base64;
+  }
 }
 
 function fillMinusButton(clone, x) {

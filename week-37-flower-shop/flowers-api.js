@@ -14,3 +14,21 @@ export async function fetchFlowers() {
 
   return body;
 }
+
+export async function postFlower(data) {
+  const response = await fetch(URL, {
+    method: "POST",
+    headers: {
+      apikey: apikey,
+      "Content-Type": "application/json",
+      Prefer: "return=minimal",
+    },
+    body: JSON.stringify(data),
+  });
+  console.log(response);
+
+  const body = await response.json();
+  console.log(body);
+
+  //return body;
+}
